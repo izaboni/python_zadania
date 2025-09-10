@@ -107,3 +107,60 @@ fri_sales = "95"
 total_sales = int(mon_sales) + int(tues_sales) + int(wed_sales) + int(thurs_sales) + int(fri_sales)
 
 print(f"This week's total sales: {total_sales}")
+
+#String methods and Attributes
+
+text = "hello, WORLD!"
+capitalized_text = text.capitalize() # The first character h is converted to uppercase. All other characters are converted to lowercase.
+casefolded_text = text.casefold()   # All characters are converted to lowercase. More aggressive than lower().
+centered_text = text.center(20, '-') # The original text is centered within a 2-character wide string, with - used as the fill character.
+counted_text = text.lower().count("l")
+encoded_text = text.encode(encoding="utf-8", errors="strict") # The text is encoded as a bytes object using UTF-8 encoding.
+endswithed_text = text.endswith("!") # Returns True if the text ends with the specified suffix, otherwise False.
+finded_text = text.find("el") # Returns the lowest index of the substring if found in the text. If not found, it returns -1.
+print(capitalized_text)
+print(casefolded_text)
+print(centered_text)
+print(counted_text)
+print(encoded_text)
+print(endswithed_text)
+print(finded_text)
+
+
+#formatted strings
+name = "Ada Lovelace"
+age = 36
+formatted_string = "My name is {}. I'm {} years old".format(name, age)
+
+print(formatted_string)
+
+#split
+csv = "name,age,occupation"
+name, age, occupation = csv.split(",")  # Splits the string at each comma and unpacks the values into variables     
+print(name)        # Output: "name"
+print(age)         # Output: "age"     
+
+new_str = "The cow jumped over the moon."
+new_str.split()
+print(new_str.split())
+
+print(new_str.split(' ', 1))
+print(new_str.split(' ', 2))
+print(new_str.split(' ', 3))
+print(new_str.split(' ', 4))
+print(new_str.split('.'))
+print(new_str.split(None, 3))
+
+verse = "If you can keep your head when all about you\n  Are losing theirs and blaming it on you,\nIf you can trust yourself when all men doubt you,\n  But make allowance for their doubting too;\nIf you can wait and not be tired by waiting,\n  Or being lied about, don’t deal in lies,\nOr being hated, don’t give way to hating,\n  And yet don’t look too good, nor talk too wise:"
+print(verse)
+
+verse_len =len(verse)
+print(verse_len)
+
+index_of_and = verse.find("and")
+print(index_of_and) 
+
+index_of_you = verse.rfind("you")
+print(index_of_you)
+
+print(verse.count("you"))
